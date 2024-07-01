@@ -18,7 +18,7 @@ const RecordPage = () => {
     return (
         <Box sx={{ mt: 2 }}>
             {record ? (
-                <Typography variant="h4">{record.name}</Typography>
+                <Typography variant="h4">{record.name} : {record.number}</Typography>
             ) : (
                 <Typography variant="h6">Loading...</Typography>
             )}

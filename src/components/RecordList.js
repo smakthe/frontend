@@ -18,7 +18,7 @@ const RecordList = ({ refresh }) => {
         <Box sx={{ mt: 2 }}>
             <List>
                 {records.map(record => (
-                    <ListItem key={record.id} component={Link} to={`/records/${record.id}`} button>
+                    <ListItem key={record.id} component={Link} to={`/records/${record._id}`} button>
                         <ListItemText primary={record.name} /><ListItemText primary={record.number} />
                     </ListItem>
                 ))}

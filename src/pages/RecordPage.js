@@ -10,9 +10,15 @@ const RecordPage = () => {
     const [record, setRecord] = useState(null);
 
     useEffect(() => {
-        axios.get(`/records/${id}`)
-            .then(response => setRecord(response.data))
-            .catch(error => console.error(error));
+        const fetchRecord = async () => {
+            try{
+                const response = await axios.get(`/records/${id}`);
+                setRecord(response.data);
+            }catch(error){
+                console.error(error);
+            }
+        };
+        fetchRecord();
     }, [id]);
 
     return (

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
-const RecordForm = (onRecordAdded) => {
+const RecordForm = ({onRecordAdded}) => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
 
@@ -13,6 +13,7 @@ const RecordForm = (onRecordAdded) => {
         try{
             await axios.post('/record', { name: name, number: number })
             setName('');
+            setNumber('');
             onRecordAdded();
         }catch(error){
             console.error(error);

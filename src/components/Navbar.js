@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 const Navbar = () => (
     <AppBar position="static">
         <Toolbar>
-            <Typography variant="h6">Record Management</Typography>
+            <Typography variant="h6"><a href='/'>Record Management</a></Typography>
         </Toolbar>
     </AppBar>
 );
